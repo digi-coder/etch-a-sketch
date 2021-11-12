@@ -4,7 +4,7 @@ const easapp = () => {
 
     let currentMode = '';
 
-    function generateGrid(size = 32 * 44, cssClass = 'medium-grid-default') {
+    function generateGrid(size = 27 * 33, cssClass = 'medium-grid-default') {
         const gameContainer = document.getElementById('grid-container');
 
         gameContainer.innerHTML = '';
@@ -15,8 +15,12 @@ const easapp = () => {
         for (let i = 0; i < size; i += 1) {
             const div = document.createElement ('div');
             gameContainer.appendChild(div);
+            div.classList.add('square-grid');
+            div.style.width = "10px";
+            div.style.height = "10px";
         }
     }
+    generateGrid();
 }
 
 //Start the easapp function
