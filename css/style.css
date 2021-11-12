@@ -6,10 +6,14 @@ html {
     box-sizing:border-box;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    font-family: Josefin Sans,sans-serif;
+    font-family: 'Jura', sans-serif;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -18,6 +22,7 @@ body {
 
 #wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -25,12 +30,53 @@ body {
 
 #container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #E90418;
     border-radius: 20px;
     width: 1079px;
     height: 750px;
+}
+
+#title {
+    display: flex;
+    align-content: center;
+    color: #FFE4BA;
+    font-size: 70px;
+    margin: 10px;
+}
+
+#grid {
+    background-color: #FAEBD7;
+    height: 550px;
+    width: 850px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: crosshair;
+    z-index: 1;
+}
+
+#controls {
+    height: 100px;
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footer {
+    /* font-family: monospace; */
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    padding-top: 10px;
+}
+
+#footer a {
+    text-decoration: none;   
 }
 
 .outer-shell {
