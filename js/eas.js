@@ -2,7 +2,7 @@ const easapp = () => {
     const gridSizeButtons = document.querySelectorAll('.size');
     const penColorButtons = document.querySelectorAll('.color');
 
-    let currentMode = '';
+    let currentColor = '';
 
     function generateGrid(size = 32 * 44, cssClass = 'medium-grid-default') {
         const gameContainer = document.getElementById('grid-container');
@@ -35,14 +35,14 @@ const easapp = () => {
         gridItems.forEach((item) => {
             item.count = 0;
             item.addEventListener('mouseenter', (e) => {
-                if (mode === 'gray' || currentMode === 'gray' || currentMode === '') {
+                if (mode === 'gray' || currentColor === 'gray' || currentColor === '') {
                     e.target.style.backgroundColor = '#707070';
                     e.target.style.opacity = 1;
-                } else if (mode === 'black' || currentMode === 'black') {
+                } else if (mode === 'black' || currentColor === 'black') {
                     e.target.style.backgroundColor = '#000000';
                     e.target.count += 1;
                     e.target.style.opacity = 0.2 * e.target.count;
-                } else if (mode === 'rainbow' || currentMode === 'rainbow') {
+                } else if (mode === 'rainbow' || currentColor === 'rainbow') {
                     const rainbowPallete = ['#EF476F', '#FFD166', '#06D6A0', '#118AB2', '#8BD175'];
                     const randomColor = Math.floor(Math.random() * rainbowPallete.length);
                     e.target.style.opacity = 1;
@@ -105,15 +105,15 @@ const easapp = () => {
                 if (selection.classList.contains('gray')) {
                     startPainting('gray');
                     selectButton(selection);
-                    currentMode = 'gray';
+                    currentColor = 'gray';
                 } else if (selection.classList.contains('black')) {
                     startPainting('black');
                     selectButton(selection);
-                    currentMode = 'black';
+                    currentColor = 'black';
                 } else {
                     startPainting('rainbow');
                     selectButton(selection);
-                    currentMode = 'rainbow';
+                    currentColor = 'rainbow';
                 }
             });
         });
