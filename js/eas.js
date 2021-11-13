@@ -100,7 +100,7 @@ const easapp = () => {
     function changeMode() {
         penColorButtons[0].classList.add('active-button');
       
-        penCoolorButtons.forEach((selection) => {
+        penColorButtons.forEach((selection) => {
           selection.addEventListener('click', () => {
             if (selection.classList.contains('gray')) {
               startPainting('gray');
