@@ -111,6 +111,15 @@ body {
     outline: none;
 }
 
+#controls button:hover {
+    background-color: #b8f4f7;
+    transition: all 0.3s;
+  }
+
+#controls .active-button {
+    background-color: #66faff !important;
+}
+
 #controls .erase {
     color: #FF5E5B !important;
     font-weight: 700;

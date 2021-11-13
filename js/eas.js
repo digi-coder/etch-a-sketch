@@ -54,7 +54,7 @@ const easapp = () => {
 
 
     function selectButton(button) {
-        if (button.classList.contains('mode')) {
+        if (button.classList.contains('color')) {
             penColorButtons.forEach((selection) => {
                 selection.classList.remove('active-button');
             });
