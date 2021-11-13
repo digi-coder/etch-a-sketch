@@ -53,6 +53,20 @@ const easapp = () => {
       }
 
 
+      function selectButton(button) {
+        if (button.classList.contains('mode')) {
+          penColorButtons.forEach((selection) => {
+            selection.classList.remove('active-button');
+          });
+        } else {
+          gridSizeButtons.forEach((selection) => {
+            selection.classList.remove('active-button');
+          });
+        }
+        button.classList.add('active-button');
+      }
+
+
     function changeSize() {
         const small = 16 * 22;
         const medium = 32 * 44;
