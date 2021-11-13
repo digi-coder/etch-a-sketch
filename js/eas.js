@@ -1,6 +1,6 @@
 const easapp = () => {
     const gridSizeButtons = document.querySelectorAll('.size');
-    const penColorButtons = document.querySelectorAll('.mode');
+    const penColorButtons = document.querySelectorAll('.color');
 
     let currentMode = '';
 
@@ -39,7 +39,7 @@ const easapp = () => {
               e.target.style.backgroundColor = '#707070';
               e.target.style.opacity = 1;
             } else if (mode === 'black' || currentMode === 'black') {
-              e.target.style.backgroundColor = '#707070';
+              e.target.style.backgroundColor = '#000000';
               e.target.count += 1;
               e.target.style.opacity = 0.2 * e.target.count;
             } else if (mode === 'rainbow' || currentMode === 'rainbow') {
@@ -97,7 +97,7 @@ const easapp = () => {
     }
 
 
-    function changeMode() {
+    function changeColor() {
         penColorButtons[0].classList.add('active-button');
       
         penColorButtons.forEach((selection) => {
@@ -131,6 +131,7 @@ const easapp = () => {
     generateGrid(); 
     startPainting();
     changeSize();
+    changeColor();
     eraseListener();
 
 }
